@@ -54,6 +54,7 @@ def generate_launch_description():
                     'oem7_if'            : 'Oem7ReceiverPort',
                     'oem7_port_name'     : LaunchConfiguration('oem7_port_name'),
                     'oem7_port_baud'     : LaunchConfiguration('oem7_port_baud')
+                    'oem7_position_source' : 'BESTPOS', # BESTPOS or INSPVAS or empty string
                     },
                     get_override_params() # Must be last to override
                     ],
