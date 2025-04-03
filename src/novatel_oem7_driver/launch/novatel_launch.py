@@ -10,13 +10,16 @@ def generate_launch_description():
 
     launch_file_path = PathJoinSubstitution([FindPackageShare(pkg_name),
                                              "launch",
-                                             "oem7_port.launch.py"])
+                                             "oem7_net.launch.py"])
 
     launch_source = PythonLaunchDescriptionSource([launch_file_path])
 
     arguments = {
         "oem7_port_name": "/dev/ttyS1",
         "oem7_port_baud": "57600",
+        "oem7_if": "Oem7ReceiverTcp"
+        "oem7_ip_addr": "10.1.0.212"
+        "oem7_port": "3001"
     }.items()
 
     return LaunchDescription([
