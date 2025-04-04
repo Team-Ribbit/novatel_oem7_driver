@@ -20,6 +20,7 @@ def generate_launch_description():
         "oem7_if": "Oem7ReceiverUdp",
         "oem7_ip_addr": "10.1.0.212",
         "oem7_port": "3001",
+        "oem7_position_source" : "",
     }.items()
 
     return LaunchDescription([

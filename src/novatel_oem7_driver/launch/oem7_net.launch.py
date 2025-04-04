@@ -55,6 +55,7 @@ def generate_launch_description():
                     'oem7_if'         : LaunchConfiguration('oem7_if'),
                     'oem7_ip_addr'    : LaunchConfiguration('oem7_ip_addr'),
                     'oem7_port'       : LaunchConfiguration('oem7_port')
+                    'oem7_position_source' : LaunchConfiguration('oem7_position_source'),
                     },
                     get_override_params() # Must be last to override
                     ],
@@ -65,11 +66,6 @@ def generate_launch_description():
     ip_arg   = arg('oem7_ip_addr', None,               'IP Address of Oem7 Receiver, e.g. 192.168.1.2')
     port_arg = arg('oem7_port',   '3001',              'TCP or UDP port, e.g. 3002')
     if_arg   = arg('oem7_if',     'Oem7ReceiverTcp',   'Interface Type: Oem7ReceiverTcp or Oem7ReceiverUdp')
+    source_arg   = arg('oem7_position_source', '', 'For GPSFix message, use "BESTPOS" only or "INSPVAS" only or dynamically select source "" ')
     
-    return LaunchDescription([ip_arg, port_arg, if_arg, 
-                              node])
-
-    
-
-
-        
+    return LaunchDescription([ip_arg, port_arg, if_arg, source_arg, node])
