@@ -54,7 +54,7 @@ def generate_launch_description():
                     'oem7_msg_decoder': 'Oem7MessageDecoder',
                     'oem7_if'         : LaunchConfiguration('oem7_if'),
                     'oem7_ip_addr'    : LaunchConfiguration('oem7_ip_addr'),
-                    'oem7_port'       : LaunchConfiguration('oem7_port')
+                    'oem7_port'       : LaunchConfiguration('oem7_port'),
                     'oem7_position_source' : LaunchConfiguration('oem7_position_source'),
                     },
                     get_override_params() # Must be last to override
