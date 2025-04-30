@@ -18,7 +18,7 @@ def generate_launch_description():
         "oem7_port_name": "/dev/ttyS1",
         "oem7_port_baud": "57600",
         "oem7_if": "Oem7ReceiverUdp",
-        "oem7_ip_addr": "10.1.0.212",
+        "oem7_ip_addr": "10.1.0.10",
         "oem7_port": "3001",
         "oem7_position_source" : "",
     }.items()
